@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+
+    <main>
+      <!-- Formulário de Tarefas -->
+      <section class="form-section">
+        <h2>Adicionar Tarefa</h2>
+        <form id="taskForm">
+          <div class="form-group">
+            <label for="taskId">ID:</label>
+            <input type="number" id="taskId" required>
+          </div>
+          <div class="form-group">
+            <label for="taskDesc">Descrição:</label>
+            <input type="text" id="taskDesc" required>
+          </div>
+          <div class="form-group">
+            <label for="taskPriority">Prioridade:</label>
+            <select id="taskPriority" required>
+              <option value="alta">Alta</option>
+              <option value="media">Média</option>
+              <option value="baixa">Baixa</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="taskDate">Data:</label>
+            <input type="date" id="taskDate" required>
+          </div>
+          <button type="submit" class="btn">Adicionar Tarefa</button>
+        </form>
+      </section>
+
+      <!-- Lista de Tarefas -->
+      <section class="task-section">
+        <h2>Fila de Tarefas</h2>
+        <ul id="taskQueue" class="task-list"></ul>
+      </section>
+
+      <!-- Histórico de Tarefas -->
+      <section class="history-section">
+        <h2>Histórico de Tarefas</h2>
+        <ul id="taskHistory" class="task-list"></ul>
+        <button id="removeTask" class="btn remove-btn">Remover Próxima Tarefa</button>
+      </section>
+    </main>
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
